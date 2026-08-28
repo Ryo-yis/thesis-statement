@@ -1,0 +1,87 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #070b20;
+  color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(circle at 50% 0%, #312e81 0, #070b20 62%);
+}
+
+.game-shell {
+  width: min(100%, 1000px);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 4px;
+  color: #67e8f9;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 18px rgb(34 211 238 / 70%);
+}
+
+.controls {
+  margin: 0 0 14px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid #6366f1;
+  border-radius: 12px;
+  background: #7dd3fc;
+  image-rendering: pixelated;
+  box-shadow: 0 0 0 5px rgb(99 102 241 / 15%), 0 18px 50px rgb(0 0 0 / 60%);
+}
+
+.hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  border: 0;
+  border-radius: 7px;
+  padding: 8px 14px;
+  background: #facc15;
+  color: #422006;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:first-child {
+  background: #c4b5fd;
+  color: #312e81;
+}
+
+button:hover {
+  background: #fde047;
+}
+
+.message {
+  min-height: 1.5em;
+  margin: 10px 0 0;
+  color: #facc15;
+  font-weight: 700;
+}
