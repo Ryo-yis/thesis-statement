@@ -10,7 +10,10 @@
     <main class="game-shell">
       <h1>Pixel Run</h1>
       <p class="controls">← → / A D：移動　｜　↑ / W / Space：ジャンプ　｜　急襲・地中・追跡・遠距離攻撃の敵に注意　｜　大きな星を3つ集めよう</p>
-      <canvas id="game" width="960" height="540" aria-label="横スクロールアクションゲーム"></canvas>
+      <div class="game-stage">
+        <canvas id="game" width="960" height="540" aria-label="横スクロールアクションゲーム"></canvas>
+        <button id="respawn" class="respawn-button" type="button">リスポーン</button>
+      </div>
       <div class="hud">
         <span id="status">コイン: 0　|　星: 0/3　|　残機: 1　|　アーマーなし</span>
         <div class="buttons">

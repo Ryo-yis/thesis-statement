@@ -4,6 +4,7 @@ const status = document.querySelector("#status");
 const message = document.querySelector("#message");
 const restartButton = document.querySelector("#restart");
 const bgmButton = document.querySelector("#bgm");
+const respawnButton = document.querySelector("#respawn");
 
 const WIDTH = canvas.width;
 const HEIGHT = canvas.height;
@@ -238,6 +239,7 @@ function resetGame() {
   });
   invulnerableTimer = 0;
   gameState = "playing";
+  respawnButton.classList.remove("visible");
   message.textContent = "";
   updateHud();
 }
@@ -292,6 +294,7 @@ function respawn(useCheckpoint = false) {
   playTone(110, 0.16, "sawtooth");
   if (lives <= 0) {
     gameState = "gameover";
+    respawnButton.classList.add("visible");
     message.textContent = "ゲームオーバー。リスタートで再挑戦！";
     updateHud();
     return;
@@ -950,6 +953,7 @@ window.addEventListener("keyup", (event) => {
 });
 restartButton.addEventListener("click", resetGame);
 bgmButton.addEventListener("click", toggleBgm);
+respawnButton.addEventListener("click", resetGame);
 
 resetGame();
 requestAnimationFrame(frame);

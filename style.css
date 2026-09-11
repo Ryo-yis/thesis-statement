@@ -47,6 +47,30 @@ canvas {
   box-shadow: 0 0 0 5px rgb(99 102 241 / 15%), 0 18px 50px rgb(0 0 0 / 60%);
 }
 
+.game-stage {
+  position: relative;
+}
+
+.respawn-button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 14px 30px;
+  border: 2px solid #fef08a;
+  border-radius: 10px;
+  background: rgb(15 23 42 / 92%);
+  color: #fef08a;
+  font-size: 1.1rem;
+  box-shadow: 0 0 24px rgb(250 204 21 / 55%);
+  z-index: 2;
+}
+
+.respawn-button.visible {
+  display: block;
+}
+
 .hud {
   display: flex;
   align-items: center;
@@ -77,6 +101,11 @@ button:first-child {
 
 button:hover {
   background: #fde047;
+}
+
+.respawn-button:hover {
+  background: #1e293b;
+  color: #fff7ed;
 }
 
 .message {
